@@ -3,7 +3,8 @@ import {
     FETCH_SMURF_SUCCESS,
     FETCH_SMURF_FAILURE,
     POST_SMURF_SUCCESS,
-    POST_SMURF_FAIL
+    POST_SMURF_FAIL,
+    FETCH_SMURF_DELETE
   } from "../actions/smurfActions";
 
   export const initialState = {
@@ -51,6 +52,12 @@ import {
             return {
                 ...state,
                 error: action.payload
+            };
+        case FETCH_SMURF_DELETE:
+            console.log(action.payload)
+            return {
+                ...state,
+                data: action.payload,
             };
         default:
             return state;
