@@ -21,6 +21,9 @@ function Form(props) {
     }
     const submitHandler= (e)=>{
         e.preventDefault()
+        setNewSmurf({name:'',
+        age:0,
+        height:'',})
     }
     
     return (
